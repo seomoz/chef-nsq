@@ -10,7 +10,7 @@
 
 include_recipe 'nsq'
 
-chef_gem 'semantic'
+# chef_gem 'semantic'
 require 'semantic'
 
 nsq_release = "nsq-#{node['nsq']['version']}-#{node['nsq']['go_version']}"
