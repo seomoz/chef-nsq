@@ -14,6 +14,7 @@ include_recipe 'nsq'
 
 chef_gem 'semantic' do
   source 'https://rubygems.org'
+  compile_time 'false'
   action :install
 end
 
