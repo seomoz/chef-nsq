@@ -3,6 +3,7 @@ AllCops:
     - ./**/*.rb
   Exclude:
     - vendor/**
+    - tmp/**/*
 
 Encoding:
   Exclude:
