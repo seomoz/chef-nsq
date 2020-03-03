@@ -42,6 +42,7 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
     rufus-lru (1.1.0)
+    semantic (1.6.1)
     treetop (1.6.10)
       polyglot (~> 0.3)
     unicode-display_width (1.4.0)
@@ -53,6 +54,7 @@ DEPENDENCIES
   foodcritic (~> 13.1.1)
   rake (~> 10.3)
   rubocop (~> 0.57.2)
+  semantic
 
 BUNDLED WITH
-   1.16.1
+   2.1.4
