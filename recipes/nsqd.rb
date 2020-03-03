@@ -11,6 +11,12 @@
 include_recipe 'nsq'
 
 # chef_gem 'semantic'
+
+chef_gem 'semantic' do
+  source 'https://rubygems.org'
+  action :install
+end
+
 require 'semantic'
 
 nsq_release = "nsq-#{node['nsq']['version']}-#{node['nsq']['go_version']}"
