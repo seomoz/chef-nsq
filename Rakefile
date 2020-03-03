@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'foodcritic'
 require 'rubocop/rake_task'
 
@@ -7,5 +9,5 @@ end
 
 RuboCop::RakeTask.new
 
-task test: [:foodcritic, :rubocop]
-task default: [:test]
+task test: %i[foodcritic rubocop]
+task default: %i[test]

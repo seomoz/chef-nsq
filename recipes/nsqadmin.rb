@@ -1,5 +1,5 @@
-# encoding: UTF-8
-#
+# frozen_string_literal: true
+
 # Cookbook Name:: chef-nsq
 # Recipe:: nsqadmin
 # Author:: Eric Lubow <elubow@simplereach.com>
@@ -24,7 +24,7 @@ if node['nsq']['setup_services']
 
   service 'nsqadmin' do
     provider Chef::Provider::Service::Upstart
-    action [:enable, :start]
+    action %i[enable start]
     supports stop: true, start: true, restart: true, status: true
     subscribes :restart, "ark[#{nsq_release}]", :delayed
   end

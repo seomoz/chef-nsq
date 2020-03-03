@@ -1,5 +1,5 @@
-# encoding: UTF-8
-#
+# frozen_string_literal: true
+
 # Cookbook Name:: chef-nsq
 # Recipe:: accounts
 # Author:: Eric Lubow <elubow@simplereach.com>

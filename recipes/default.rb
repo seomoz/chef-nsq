@@ -1,5 +1,5 @@
-# encoding: UTF-8
-#
+# frozen_string_literal: true
+
 # Cookbook Name:: chef-nsq
 # Recipe:: default
 # Author:: Eric Lubow <elubow@simplereach.com>
@@ -16,7 +16,7 @@ nsq_arch    = node['nsq']['arch']
 go_version  = node['nsq']['go_version']
 download_url = "https://s3.amazonaws.com/bitly-downloads/nsq/nsq-#{nsq_version}.#{nsq_arch}.#{go_version}.tar.gz"
 nsq_release = "nsq-#{nsq_version}-#{go_version}"
-nsq_binaries = %w(
+nsq_binaries = %w[
   bin/nsqadmin
   bin/nsqd
   bin/nsqlookupd
@@ -26,14 +26,12 @@ nsq_binaries = %w(
   bin/nsq_to_file
   bin/nsq_to_http
   bin/nsq_to_nsq
-)
+]
 
 # Install `to_nsq` if we're using a version that includes it
 # This comparison isn't exactly correct, but should work since no one is using
 # this cookbook with a version of NSQ before 0.2.10.
-if nsq_version >= '0.2.30'
-  nsq_binaries << 'bin/to_nsq'
-end
+nsq_binaries << 'bin/to_nsq' if nsq_version >= '0.2.30'
 
 ark nsq_release do
   action :install

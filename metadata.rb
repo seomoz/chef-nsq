@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 name 'nsq'
 maintainer 'SimpleReach'
 maintainer_email 'rbradberry@simplereach.com'
