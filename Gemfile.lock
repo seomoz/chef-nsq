@@ -54,7 +54,7 @@ DEPENDENCIES
   foodcritic (~> 13.1.1)
   rake (~> 10.3)
   rubocop (~> 0.57.2)
-  semantic
+  semantic (~> 1.6.1)
 
 BUNDLED WITH
    1.16.1
